@@ -1,0 +1,360 @@
+*
+{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+header
+{
+    padding-bottom: 100px;
+    background-image:linear-gradient(256deg, #b867ff, #ff9b82);
+}
+
+#bar
+{
+    display: flex;
+    flex-wrap: inherit;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    position: fixed;
+    background-image:linear-gradient(90deg, #e48282, #a058c9);
+    list-style: none;
+    box-shadow: 0 -6px 15px 10px rgba(0, 0, 0, 0.5);
+}
+
+#logo
+{
+    margin-left: 0.5vw;
+    width: 8vw;
+    padding: 2px 0px 2px 0px;
+}
+
+#title-button
+{
+    color: white;
+    text-decoration: none;
+    margin-left: -16vw;
+    margin-right: -6vw;
+}
+
+#title-button p
+{
+    font-size: 35px;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 4px;
+}
+
+.nav-link
+{
+    color: black;
+    font-size: 22px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    padding-right: 3vw;
+}
+
+#selected, .nav-link:hover
+{
+    color: white;
+}
+
+::-webkit-scrollbar 
+{
+    width: 11px;
+}
+
+/* Track */
+::-webkit-scrollbar-track 
+{
+    box-shadow: inset 0 0 4px rgb(32, 28, 28);
+    border-radius: 100px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb 
+{
+    background-image: linear-gradient(#7225dd, #b27cd2);
+    border-radius: 100px;
+}
+
+main
+{
+    background-image:linear-gradient(256deg, #b867ff, #ff9b82);
+    max-height: fit-content;
+    min-height: 90vh;
+}
+
+#title
+{
+    font-size: 50px;
+    padding-top: 5vh;
+    padding-bottom: 30px;
+}
+
+.row
+{
+    display: flex;
+    flex-wrap: inherit;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.course-name
+{
+    text-decoration: underline;
+}
+
+.course
+{
+    padding: 25px 0px 25px 0px;
+    border: black solid;
+    border-width: 3px;
+    border-radius: 15px;
+    min-width: 30%;
+    width: 30%;
+    height: fit-content;
+}
+
+.description
+{
+    display: none;
+}
+
+.learn-more
+{
+    display: none;
+}
+
+.course:hover
+{
+    padding-bottom: 10px;
+}
+
+.course:hover #black-cover
+{
+    border-radius: 5px;
+    margin: -25px 0px -10px 0px;
+    padding: 25px 0px 10px 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.course:hover .description
+{
+    display:block;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    padding: 10px 0px 10px 0px;
+    margin: auto;
+    width: 90%;
+}
+
+.course:hover .learn-more
+{
+    display: block;
+    background-color:#ff9b82;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 10px 5px 10px;
+    border: black solid;
+    border-width: 3px;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.spacer
+{
+    padding: 0px 1vw 0px 1vw;
+}
+
+#biology
+{
+    color: white;
+    background-image: url('../images/biology.jpg');
+}
+
+#microbiology
+{
+    color: white;
+    background-image: url('../images/microbiology.png');
+    background-size: 520px;
+}
+
+#biochemistry
+{
+    color: white;
+    background-image: url('../images/biochemistry.jpg');
+    background-size: 420px;
+}
+
+#anatomy
+{
+    color: white;
+    background-image: url('../images/anatomy.jpg');
+}
+
+#physiology
+{
+    color: white;
+    background-image: url('../images/physiology.jpeg');
+    background-size: 500px;
+}
+
+#ecology
+{
+    color: white;
+    background-image: url('../images/ecology.jpg');
+    background-size: 610px;
+}
+
+#genetics
+{
+    color: white;
+    background-image: url('../images/genetics.jpeg');
+    background-size: 600px;
+}
+
+#immunology
+{
+    color: white;
+    background-image: url('../images/immunology.png');
+    background-size: 640px;
+}
+
+#psychology
+{
+    color: white;
+    background-image: url('../images/psychology.jpg');
+    background-size: 500px;
+}
+
+#bottom-content
+{
+    border-top: black solid;
+    border-width: 5px;
+    height: 50vh;
+    background-color:#983dcd;
+    display: flex;
+}
+
+#bottom-content #left-gap, #bottom-content #right-gap
+{
+    flex: 2.5;
+}
+
+#left-column, #center-column, #right-column
+{
+    flex: 10;
+}
+
+#bottom-content h1
+{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 50px;
+    letter-spacing: 2px;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 55px;
+    padding-bottom: 10px;
+}
+
+#bottom-content p
+{
+    color: white;
+    text-align: left;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+#bottom-content a
+{
+    color: white;
+}
+
+#bottom-content h2
+{
+    color:white;
+    font-size: 35px;
+    text-align: left;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 65px;
+    padding-bottom: 10px;
+    text-decoration: underline;
+}
+
+#left-column, #center-column, #right-column
+{
+    text-align: left;
+}
+
+#left-column a
+{
+    padding-top: 50px;
+}
+
+#center-column
+{
+    margin-left: 10vw;
+}
+
+#center-column ul
+{
+    list-style: none;
+    text-align: left;
+    margin-left: 10px;
+}
+
+#center-column li
+{
+    text-align: left;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+#center-column a
+{
+    text-decoration: none;
+}
+
+#right-column #signup
+{
+    margin-left: -255px;
+}
+
+input
+{
+    border: black solid;
+    border-width: 4px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+::placeholder
+{
+    font-size: 16px;
+    color: black;
+}
+
+#right-column button
+{
+    background-color: #efc4a5;
+    padding: 7px;
+    border: black solid;
+    border-width: 4px;
+    border-radius: 5px;
+    font-weight: 600;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <head>
+        <!--Boilerplate-->
+        <meta charset = "UTF-8" />
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1" />
+        
+        <!-- Icon used for in tabs -->
+        <link rel="shortcut icon" type="image/png" href= "../images/logo.png">
+
+        <!-- Grabs custom fonts from Google -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet">
+
+        <!--Boilerplate End-->
+
+        <!-- Links to CSS file -->
+        <link rel = "stylesheet" href = "../stylers/login.css" />
+
+        <!-- Name of tab in browser -->
+        <title>Login</title>
+    </head>
+
+    <body>
+        <!-- Navigation bar -->
+        <header>
+            <div id = 'bar'>
+                <img src = '../images/logo.png' alt = 'logo' id = 'logo'>
+                <a id = 'title-button' href = '../index.html'><p>Medical</p><p>Methodology</p></a>
+                <li><a class = 'nav-link' href = 'about.html'>About Us</a></li>
+                <li><a class = 'nav-link' href = 'contact.html'>Contact Us</a></li>
+                <li><a class = 'nav-link' href = 'signup.html' style = 'margin-right: 7vw;'>Sign Up</a></li>
+            </div>
+        </header>
+
+        <main>
+            <br></br>
+            <br></br>
+            
+            <!-- Login form -->
+            <div id = 'details'>
+                <h1>Login</h1>
+
+                <form action = 'login.html' method = 'POST' id = 'login-form'>
+                    <!-- Email entry -->
+                    <input type = 'text' placeholder = 'Email...' name = 'email' id = 'email'></input>
+                    <br></br>
+                    
+                    <!-- Password entry -->
+                    <input type = 'password' placeholder = 'Password' name = 'password' id = 'password'></input>
+                                        
+                    
+                    <!-- Used for injecting HTML when JS detects sign up error -->
+                    <div id = 'error'></div> 
+
+                    <p id = 'small-gap'></p>
+
+                    <!-- Submit button -->
+                    <button id = 'login-button'>Login</button>
+                </form>
+            </div>
+
+            <!-- Spacer between top and bottom content -->
+            <div style = 'height: 45vh;'></div>
+
+            <!-- Page footer -->
+            <section id = 'bottom-content'>
+                <!-- Left spacer -->
+                <div id = 'left-gap'></div>
+                
+                <!-- Copyright information -->
+                <div id = 'left-column'>
+                    <h1>Medical Methodology</h1>
+                    <p>Providing students with the resources to excel.</p>
+                    <p>© Copyright. All Rights Reserved.</p>
+                    <div style = 'padding-top: 6px;'></div>
+                    <a href = 'index.html'>Medical Methodology 2022</a>
+                </div>
+                
+                <!-- Quick access links -->
+                <div id = 'center-column'>
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href = '../index.html'>Home</a></li>
+                        <li><a href = 'signup.html'>Signup</a></li>
+                        <li><a href = 'login.html'>Login</a></li>
+                        <li><a href = 'dictionary.html'>Dictionary</a></li>
+                        <li><a href = 'about.html'>About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter signup -->
+                <div id = 'right-column'>
+                    <h2>Newsletter</h2>
+                    <p>Subscribe so you don't miss out on the latest medical findings and advancements!</p>
+
+                    <br></br>
+
+                    <div id = 'signup'>        
+                        <form action = 'login.html' method = 'POST' id = 'login-form'>
+                            <input type = 'text' placeholder = 'Email' name = 'email' id = 'email'></input>
+                                                
+                            <!-- Used for injecting HTML when JS detects sign up error -->
+                            <div id = 'error'></div> 
+                            
+                            <div style = 'padding: 10px;'></div>
+        
+                            <!-- Submit button -->
+                            <button id = 'submit-button'>Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Right spacer -->
+                <div id = 'right-gap'></div>
+            </section>
+        </main>
+
+        <!-- Imports certain Firebase services -->
+        <script src = "https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+        <script src = "https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+        <script src = "https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+
+        <!-- Firebase configuration to link up to project on backend -->
+        <script>
+            var config = 
+            {
+                apiKey: "AIzaSyAO9fiKvzaBHcRE7USzWk_PKLZK59d1jho",
+                authDomain: "medical-methodology.firebaseapp.com",
+                projectId: "medical-methodology",
+                storageBucket: "medical-methodology.appspot.com",
+                messagingSenderId: "261830586183",
+                appId: "1:261830586183:web:3f2f805aa432d2fa1c2662",
+                measurementId: "G-237XPXZER0"
+            };
+            
+            firebase.initializeApp(config);
+    
+            const auth = firebase.auth();
+            const db = firebase.firestore();
+    
+            db.settings({timestampsInSnapshots : true});
+        </script>
+
+        <!-- Links to JS file -->
+        <!-- Place JS files at end of body to allow them to reference HTML elements -->
+        <script src = '../js/login.js'></script>
+        <script src = '../js/mobile_check.js'></script>
+    </body>
+</html>
