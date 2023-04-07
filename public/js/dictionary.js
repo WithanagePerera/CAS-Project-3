@@ -1,5 +1,5 @@
 // Links constants to HTML elements
-const dashboard = document.querySelector('dashboard');
+const dashboard = document.querySelector('#dashboard');
 const terms = document.querySelector('#terms');
 const createTerm = document.querySelector('#create');
 const listTerms = document.querySelector('#list');
@@ -551,16 +551,16 @@ function createTermWindow()
         // Stores term and definition
         const term = document.querySelector('#term').value;
         const definition = document.querySelector('#definition').value;
-        const commonFields = document.querySelector('#common-fields').value;
-        const abbreviations = document.querySelector('#abbreviations').value;
+        // const commonFields = document.querySelector('#common-fields').value;
+        // const abbreviations = document.querySelector('#abbreviations').value;
 
         // Stores data in terms Collection
         db.collection('terms').doc(term).set(
         {
             term : term,
-            definition : definition,
-            common_fields : commonFields,
-            abbreviations : abbreviations
+            definition : definition
+            //common_fields : commonFields,
+            //abbreviations : abbreviations
         })
 
         console.log('Successfully created new term and definition.');

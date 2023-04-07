@@ -41,7 +41,7 @@ signUpForm.addEventListener('submit', (e) =>
             // Creates document within collection containing user-info
             db.collection('users').doc(cred.user.uid).set(
             {
-                name : signUpForm['first-name'].value + ' ' + signUpForm['last-name'].value,
+                name : signUpForm['name'].value,
                 uid : cred.user.uid,
                 type : signUpForm['option'].value
             })
@@ -70,6 +70,7 @@ signUpForm.addEventListener('submit', (e) =>
         })
         .catch(function(error)
         {
+            console.log(error);
             if (error.code == "auth/invalid-email")
             {
                 // Creates error message
